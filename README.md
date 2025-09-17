@@ -3,19 +3,73 @@
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a14ccc94-6aad-429c-907c-ac1d388b0892" />
 
 
-Comyx es una librería en Python para la simulación avanzada de sistemas de comunicación inalámbrica, pensada como la base tecnológica de Argo, un framework orientado a la creación de aplicaciones distribuidas basadas en grafos.
+**Comyx** es una librería en Python para la simulación avanzada de sistemas de comunicación inalámbrica, pensada como una de las bases tecnológicas de **Argo**, un framework orientado a la creación de aplicaciones distribuidas basadas en grafos.
 
-Su diseño combina modelos de comunicación tradicionales con optimización inteligente y procesamiento distribuido, creando un puente entre la investigación teórica y las aplicaciones prácticas en telecomunicaciones de próxima generación.
+**Comyx** combina modelos de comunicación tradicionales con optimización inteligente y procesamiento distribuido, creando un puente entre la investigación teórica y las aplicaciones prácticas en telecomunicaciones de próxima generación.
 
-Características principales
-Categoría	Descripción
-B5G y redes emergentes	STAR-RIS, NOMA y tecnologías clave para Beyond 5G.
-Modelos de canal	AWGN, Rayleigh Fading, Rician Fading.
-Modulación	BPSK, QPSK, QAM y extensible a otros esquemas.
-Métricas avanzadas	Sum rate, outage probability, throughput.
-IA y optimización	Integración con Reinforcement Learning (RL) para optimización dinámica.
-Escalabilidad	Preparado para ejecución distribuida y simulaciones en tiempo real.
-Arquitectura General
+**Características principales**:
+
+Comyx se centra en tres grandes bloques funcionales que corresponden a la arquitectura presentada en el diagrama.
+
+## 1. Simulación de redes inalámbricas (Comyx Core)
+
+Esto es el núcleo del sistema. Aquí definimos cómo se comporta la red, desde la señal física hasta las métricas de rendimiento.
+
+Funciones principales:
+
+Modelos de canal
+Representa cómo se comporta el medio inalámbrico:
+
+AWGN → ruido básico (como estática en la radio).
+
+Rayleigh Fading → zonas con múltiples rebotes de señal.
+
+Rician Fading → mezcla de línea directa y rebotes.
+
+Procesamiento de señal
+Aplica modulación y demodulación como BPSK, QPSK, QAM, etc.
+
+Cálculo de métricas
+Mide el rendimiento de la simulación:
+
+Throughput (velocidad efectiva).
+
+Outage Probability (probabilidad de caída de señal).
+
+Sum Rate (capacidad total de la red).
+
+
+## 2. Optimización (Optimization Layer)
+
+Una vez simulada la red, entra la capa de optimización para mejorar su rendimiento automáticamente.
+
+### **Reinforcement Learning (RL)**:
+El sistema aprende por sí mismo a tomar mejores decisiones:
+
+Ajusta parámetros como potencia de transmisión o asignación de canales.
+
+Similar a cómo un coche autónomo mejora su conducción practicando.
+
+### **Metaheurísticas**:
+Algoritmos clásicos como:
+
+Genéticos (evolución).
+Enjambre de partículas.
+Búsqueda tabú.
+
+
+## **3. Visualización (Visualization Tools)**
+
+Esta parte es donde los resultados se convierten en gráficos y dashboards, para que los investigadores o ingenieros puedan interpretar los datos.
+
+Ejemplo:
+
+Gráficas de throughput vs. ruido.
+
+Mapas de cobertura.
+
+Reportes exportables para documentación.
+
 
 Comyx está construido sobre una arquitectura modular que separa simulación, optimización y visualización. Esto facilita la integración con Argo y otros sistemas.
 
@@ -31,15 +85,6 @@ flowchart TD
     
     J[External Systems/Argo] <--> B
 
-Relación con Argo
-
-Comyx es el primer componente dentro del ecosistema Argo.
-
-Fase	Comyx	Argo
-Actual	Simulación de redes inalámbricas y validación de algoritmos.	N/A
-Futuro cercano	Optimización con RL y cómputo distribuido.	Consumo de resultados de simulación para aplicaciones basadas en grafos.
-Fase final	Simulaciones en tiempo real integradas en la arquitectura de Argo.	Orquestación de microservicios y aplicaciones sobre grafos.
-Instalación
 
 Instala la última versión estable con pip:
 
@@ -94,24 +139,14 @@ Ray RLlib (optimización distribuida)
 pip install -U ray[default]   # núcleo y herramientas base
 pip install -U ray[rllib]     # librerías específicas de RL
 
-Roadmap
-Fase	Objetivo	Estado
-Fase 1	Modelos de canal básicos y simulaciones B5G.	✅ Completado
-Fase 2	Integración con IA y RL para optimización.	🚧 En progreso
-Fase 3	Procesamiento distribuido y ejecución en la nube.	🗓 Planeado
-Fase 4	Integración total con Argo para simulaciones en tiempo real.	🗓 Planeado
-Visión a Futuro
 
-De simulación independiente a plataforma distribuida.
+## **Visión a Futuro**
 
 La evolución de Comyx dentro de Argo permitirá:
 
 Simulaciones en tiempo real para aplicaciones críticas como IoT, Smart Cities y redes vehiculares.
-
 Optimización autónoma de redes mediante RL y técnicas de metaheurística.
-
 Integración cloud-native para escalabilidad en entornos de producción.
-
 Entorno extensible para investigadores y desarrolladores.
 
 Diagrama de la evolución hacia Argo
@@ -121,22 +156,32 @@ flowchart LR
     C --> D[Integración con Argo]
     D --> E[Simulación en tiempo real y orquestación de grafos]
 
-Contribuciones
 
-¡Estamos abiertos a contribuciones!
+## **Analogía práctica con algo común**
 
-Haz un fork del repositorio
+Comyx es como Google Maps, pero en versión laboratorio:
 
-Crea una rama para tu feature
 
-Envía un PR con una descripción clara
+Nuestros Channel Models son como Calles y carreteras
+Los Signal Processing son Señales de tráfico y direcciones
+Los Performance Metrics son la Información de tráfico y tiempos
+Los Optimization Layer (RL)	son las Ruta más rápida en tiempo real
+La Visualization Tools	es El mapa que ves en pantalla
+Y los External Systems que usemos en el futuro con Argo gracias a Comyx son como los datos que usan Uber o Waze de Google Maps
 
-Revisa la Guía de Contribución
- antes de enviar tus cambios.
 
-Licencia
+## **Resumen final**
+
+Comyx es:
+
+Hoy: un simulador avanzado de redes 5G/B5G que permite probar y validar algoritmos.
+
+Mañana: la pieza clave dentro de Argo para ejecutar simulaciones en tiempo real y optimizar redes distribuidas vivas.
+
+Esto lo hace esencial para cualquier aplicación futura de IoT, Smart Cities, vehículos autónomos o comunicaciones críticas.
+
 
 Este proyecto está bajo la licencia MIT.
 Consulta el archivo LICENSE
- para más detalles.
+
  
