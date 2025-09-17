@@ -1,4 +1,4 @@
-*Comyx*
+**Comyx**
 
 Core Simulation Library for Argo: Wireless Systems Simulation for Beyond 5G and Next-Gen Networks
 
