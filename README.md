@@ -1,6 +1,9 @@
-**Comyx**
+Comyx
 
-Core Simulation Library for Argo: Wireless Systems Simulation for Beyond 5G and Next-Gen Networks
+Comyx es una librería de Python enfocada en la simulación de sistemas de comunicación inalámbrica, diseñada para investigación y desarrollo de tecnologías B5G (Beyond 5G).
+Combina NumPy y SciPy para cálculos numéricos, y Numba para compilación JIT, logrando simulaciones de alto rendimiento y escalables.
+
+Esta librería es parte de la iniciativa ARGO, cuyo objetivo es construir una plataforma integral para optimización de redes, simulación avanzada y aprendizaje automático aplicado a comunicaciones inalámbricas.
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a14ccc94-6aad-429c-907c-ac1d388b0892" />
 
