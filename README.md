@@ -1,6 +1,10 @@
-Comyx
+*Comyx*
 
 Core Simulation Library for Argo: Wireless Systems Simulation for Beyond 5G and Next-Gen Networks
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a14ccc94-6aad-429c-907c-ac1d388b0892" />
+
+
 
 Comyx es una librería en Python para la simulación avanzada de sistemas de comunicación inalámbrica, pensada como la base tecnológica de Argo, un framework orientado a la creación de aplicaciones distribuidas basadas en grafos.
 
